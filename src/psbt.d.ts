@@ -83,6 +83,7 @@ export declare class Psbt {
     addOutput(outputData: PsbtOutputExtended): this;
     extractTransaction(disableFeeCheck?: boolean): Transaction;
     getFeeRate(): number;
+    hashMessage(inputIndex: number, publicKey: Buffer): this;
     getFee(): number;
     finalizeAllInputs(): this;
     finalizeInput(inputIndex: number, finalScriptsFunc?: FinalScriptsFunc | FinalTaprootScriptsFunc): this;
